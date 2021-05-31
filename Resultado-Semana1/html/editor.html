@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Editor de Código</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/editor.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header class="header">
+
+            <div class="container">
+
+                <section class="logo">
+                    <img src="../images/Header/logo.svg" alt="Logo da AluraDev">
+                </section>
+
+                <section class="searchbar-header">
+                    <input class="searchbar__search searchbar__search--hover" type="text" placeholder="Busque por algo">
+                </section>
+
+                <section class="user-header">
+                    <div class="user__box user__box--hover">
+                        <img class="user__box-photo" src="../images/Header/foto-usuario.svg" alt="Foto de usuário">
+                        <p>Harry</p>
+                    </div>
+                </section>
+
+                <div class="responsive-menu-icons">
+
+                    <section class="searchmenu-icon">
+                        <img src="../images/Header/search.svg" alt="Ícone de abertura da barra de pesquisa" class="searchmenu-icon--open">
+                        <img src="../images/Header/menu-close.svg" alt="Ícone de fechamento da barra de pesquisa" class="searchmenu-icon--close">
+                    </section>
+
+                    <nav class="navmenu-icon">
+                        <img src="../images/Header/menu-open.svg" alt="Ícone de abertura do menu de navegação" class="navmenu-icon--open">
+                        <img src="../images/Header/menu-close.svg" alt="Ícone de fechamento do menu de navegação" class="navmenu-icon--close">
+                    </nav>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <main class="main">
+
+            <div class="container">
+
+                <div class="navmenu">
+
+                    <section class="navbar">
+                        <h2 class="navbar__title">M E N U</h2>
+                        <div class="navbar__editor navbar__editor--hover navbar__editor--active">
+                            <a href="editor.html" class="navbar__editor-icon navbar__editor-icon--hover navbar__editor-icon--active">
+                                <img src="../images/Main/editor.svg" alt="Ícone referente à seção do editor">
+                            </a>
+                            <p>Editor de código</p>
+                        </div>
+                        <div class="navbar__community navbar__editor--hover 
+                        navbar__editor--active">
+                            <a href="#" class="navbar__community-icon navbar__community-icon--hover navbar__community-icon--active">
+                                <img src="../images/Main/comunidade.svg" alt="Ícone referente à seção da comunidade">
+                            </a>
+                            <p>Comunidade</p>
+                        </div>
+                    </section>
+
+                    <section class="user-main">
+                        <div class="user__box user__box--hover">
+                            <img class="user__box-photo" src="../images/Header/foto-usuario.svg" alt="Foto de usuário">
+                            <p>Harry</p>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="searchmenu">
+
+                    <section class="searchbar-main">
+                        <input class="searchbar__search searchbar__search--hover" type="text" placeholder="Busque por algo">
+                    </section>
+
+                </div>
+
+                <section class="code-editor">
+                    <div class="code-editor__window-border">
+                        <div class="code-editor__window">
+                            <img src="../images/Main/circulo-vermelho.svg" alt="Círculo vermelho" class="code-editor__window-circle">
+                            <img src="../images/Main/circulo-amarelo.svg" alt="Círculo amarelo" class="code-editor__window-circle">
+                            <img src="../images/Main/circulo-verde.svg" alt="Círculo verde" class="code-editor__window-circle">
+                            <textarea cols="30" rows="10" class="code-editor__window-textfield"></textarea>
+                        </div>
+                    </div>
+                    <div class="code-editor__button-border code-editor__button-border--hover code-editor__button-border--active">
+                        <button class="code-editor__button code-editor__button--hover code-editor__button--active">Visualizar com o highlight</button>
+                    </div>
+                </section>
+
+                <form class="main-right-section">
+
+                    <fieldset class="project">
+                        <h2 class="project__title">S E U  P R O J E T O</h2>
+                        <textarea placeholder="Nome do seu projeto" cols="30" rows="10" class="project__name project__name--hover"></textarea>
+                        <textarea placeholder="Descrição do seu projeto" cols="30" rows="10" class="project__description project__description--hover"></textarea>
+                    </fieldset>
+
+                    <fieldset class="personalization">
+                        <h2 class="personalization__title">P E R S O N A L I Z A Ç Ã O</h2>
+                        <div class="personalization__box">
+                            <select class="personalization__select personalization__select--hover">
+                                <option>JavaScript</option>
+                                <option>HTML</option>
+                                <option>CSS</option>
+                            </select>
+                            <input class="personalization__color-changer" type="color">
+                        </div>
+                    </fieldset>
+
+                    <div class="submit-button-border submit-button-border--hover submit-button-border--active">
+                        <input class="submit-button submit-button--hover submit-button--active" value="Salvar projeto" type="submit">
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+        <script src="../js/editor.js"></script>
+
+    </body>
+
+</html>

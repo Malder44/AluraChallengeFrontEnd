@@ -1,0 +1,508 @@
+/*
+Summary:
+
+Line 16 - General CSS section 
+Line 118 - Header section
+Line 161 - Main section - navbar, navmenu and searchmenu sections
+Line 205 - Main section - code editor section
+Line 255 - Main section - form section
+Line 328 - General CSS responsive section
+Line 413 - Responsive section - tablet section
+Line 452 - Responsive section - mobile section
+*/
+
+
+
+/* General CSS section */
+
+:root {
+    --body-bg: #051D3B;
+    --text-color: #FFFFFF;
+    --input-bg: #FFFFFF16;
+    --input-bg-hover: #FFFFFF24;
+    --input-text-color: #FFFFFF;
+    --user-bg-hover: #FFFFFF16;
+    --navbar-icon-bg: #5081FB55;
+    --navbar-icon-opacity: 0.56;
+    --navbar-icon-bg-hover: #5081FB;
+    --navbar-icon-opacity-hover: 0.72;
+    --navbar-icon-bg-active: #5081FB;
+    --navbar-icon-opacity-active: 1;
+    --editor-border-color: #9C44DC;
+    --editor-button-bg: #5081FB12;
+    --editor-button-bg-hover: #5081FB24;
+    --submit-bg: #5081FB;
+    --submit-bg-hover: #7BA4FC;
+    --submit-bg-active: #7BA4FC;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--body-bg);
+    font-size: 16px;
+}
+
+input, textarea, select, button {
+    font-family: inherit;
+}
+
+.header, .main {
+    font-size: 1rem;
+}
+
+.container {
+    width: 94vw;
+    margin: 0 auto;
+    padding: 2em 0;
+    box-sizing: border-box;
+}
+
+.logo, .user-header, .navmenu, .main-right-section {
+    width: 20%;
+}
+
+.searchbar-header, .code-editor {
+    width: 55%;
+}
+
+.navbar__title, .project__title, .personalization__title {
+    font-size: 0.8em;
+    margin-bottom: 1.8em;
+    font-weight: normal;
+    color: var(--text-color);
+}
+
+.searchbar__search,
+.code-editor__window,
+.code-editor__window-border,
+.code-editor__window-textfield,
+.code-editor__button,
+.code-editor__button-border,
+.project__name,
+.project__description,
+.personalization__select,
+.submit-button,
+.submit-button-border {
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+}
+
+.searchbar__search,
+.code-editor__window-textfield,
+.code-editor__button,
+.project__name,
+.project__description,
+.personalization__select,
+.submit-button {
+    font-size: 0.9em;
+}
+
+.searchbar__search,
+.project__name,
+.project__description,
+.personalization__select {
+    background: var(--input-bg);
+    outline: none;
+    color: var(--input-text-color);
+}
+
+.searchbar__search--hover:hover,
+.project__name--hover:hover,
+.project__description--hover:hover,
+.personalization__select--hover:hover {
+    background: var(--input-bg-hover);
+}
+
+
+/* Header section */
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchbar__search {
+    width: 100%;
+    height: 57px;
+    padding: 0 1.3em;
+}
+
+.user-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    width: 45%;
+    height: 57px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.user__box--hover:hover {
+    background: var(--user-bg-hover);
+}
+
+.user__box-photo {
+    margin-right: 0.5em;
+}
+
+.responsive-menu-icons, .searchmenu-icon, .searchmenu-icon--close, .navmenu-icon--close {
+    display: none;
+}
+
+
+/* Main section - navbar, navmenu and searchmenu sections */
+
+.main .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__editor, .navbar__community {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3em;
+    color: var(--text-color);
+    opacity: var(--navbar-icon-opacity);
+}
+
+.navbar__editor--hover:hover, .navbar__community--hover:hover {
+    opacity: var(--navbar-icon-opacity-hover);
+}
+
+.navbar__editor--active:active, .navbar__community--active:active {
+    opacity: var(--navbar-icon-opacity-active);
+}
+
+.navbar__editor-icon, .navbar__community-icon {
+    padding: 1em 0.9em;
+    margin-right: 1.2em;
+    background: var(--navbar-icon-bg);
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.navbar__editor-icon--hover:hover, .navbar__community-icon--hover:hover {
+    background: var(--navbar-icon-bg-hover);
+}
+
+.navbar__editor-icon--active:active, .navbar__community-icon--active:active {
+    background: var(--navbar-icon-bg-active);
+}
+
+.user-main, .searchmenu, .searchbar-main {
+    display: none;
+}
+
+
+/* Main section - code editor section */
+
+.code-editor__window-border {
+    height: 380px;
+    padding: 1.9em;
+    background: var(--editor-border-color);
+}
+
+.code-editor__window {
+    height: 100%;
+    padding: 1em 1em;
+    background: #000;
+}
+
+.code-editor__window-circle {
+    height: 4.2%;
+    margin: 0 0.2em 0.3em 0;
+}
+
+.code-editor__window-textfield {
+    height: 92%;
+    width: 100%;
+    padding: 1em 0;
+    background: #000;
+    outline: none;
+    resize: none;
+    color: var(--text-color);
+    line-height: 1.5em;
+}
+
+.code-editor__button-border {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin-top: 2em;
+}
+
+.code-editor__button {
+    width: 100%;
+    height: 100%;
+    background: var(--editor-button-bg);
+    color: var(--text-color);
+    padding: 6px;
+}
+
+.code-editor__button--hover:hover, .code-editor__button--active:active {
+    background: var(--editor-button-bg-hover);
+}
+
+
+/* Main section - form section */
+
+.project {
+    margin-bottom: 3em;
+}
+
+.project__name, .project__description {
+    width: 100%;
+    resize: none;
+}
+
+.project__name {
+    height: 60px;
+    padding: 1.5em 1em;
+    margin-bottom: 1em;
+}
+
+.project__description {
+    height: 80px;
+    padding: 1em;
+}
+
+.personalization__select {
+    width: 100%;
+    height: 50px;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+    resize: none;
+}
+
+.personalization__select option {
+    color: #000;
+}
+
+.personalization__color-changer {
+    width: 100%;
+    height: 50px;
+    padding: 0.1em 0.3em;
+    margin-bottom: 2em;
+    background: var(--body-bg);
+    box-sizing: border-box;
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+}
+
+.personalization__color-changer::-webkit-color-swatch {
+    padding: 0.1em 0.3em;
+    border: 1px solid var(--body-bg);
+    border-radius: 8px;
+}
+
+.submit-button {
+    width: 100%;
+    height: 100%;
+    background: var(--submit-bg);
+}
+
+.submit-button--hover:hover {
+    background: var(--submit-bg-hover);
+}
+
+.submit-button--active:active {
+    background: var(--submit-bg-active);
+}
+
+.submit-button-border {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    background: var(--submit-bg);
+}
+
+
+/* General CSS responsive section */
+
+@media screen and (max-width: 1024px) {
+
+    .user-header, .navmenu {
+        display: none;
+    }
+
+    .responsive-menu-icons {
+        display: flex;
+    }
+
+    .main .container {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .menu-icon--appear, .search-icon--appear {
+        display: block;
+    }
+
+    .menu-icon--disappear, .search-icon--disappear {
+        display: none;
+    }
+
+    .navmenu, .searchmenu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1.3em;
+        box-sizing: border-box;
+        background-color: #2D415B;
+        border-radius: 12px;
+    }
+
+    .navmenu--appear, .searchmenu--appear {
+        display: block;
+    }
+
+    .navbar {
+        border-bottom: 1px solid #EEE;
+        padding-bottom: 0.5em;
+        margin-bottom: 1.3em;
+    }
+
+    .navbar__title {
+        display: none;
+    }
+
+    .user-main {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .user__box {
+        margin-left: 0.5em;
+    }
+
+    .code-editor {
+        width: 100%;
+        margin-bottom: 3em;
+    }
+
+    .main-right-section {
+        width: 100%;
+    }
+
+    .searchbar__search,
+    .project__name,
+    .project__description,
+    .personalization__select {
+        font-size: 1em;
+    }
+
+    .project__name {
+        padding: 1.25em 1em;
+    }
+
+    .personalization__box {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+/* Responsive section - tablet section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .logo {
+        width: 25%;
+    }
+
+    .searchbar-header {
+        width: 60%;
+    }
+
+    .responsive-menu-icons {
+        width: 10%;
+        justify-content: flex-end;
+    }
+
+    .navmenu-icon {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        color: #fff;
+    }
+
+    .navmenu {
+        height: 90vh;
+        width: 30vw;
+    }
+
+    .searchmenu {
+        display: none;
+    }
+
+    .personalization__select, .personalization__color-changer {
+        width: 49%;
+    }
+}
+
+
+/* Responsive section - mobile section */
+
+@media screen and (max-width: 768px) {
+
+    .searchbar-header {
+        display: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .responsive-menu-icons {
+        width: 40%;
+        justify-content: space-around;
+    }
+
+    .searchmenu-icon, .navmenu-icon {
+        display: block;
+    }
+
+    .searchbar-main {
+        display: block;
+    }
+
+    .personalization__box {
+        flex-direction: column;
+    }
+
+    .personalization__select, .personalization__color-changer {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 768px) {
+
+    .navmenu, .searchmenu {
+        height: 70vh;
+        width: 40vw;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 550px) {
+
+    .navmenu, .searchmenu {
+        height: 70vh;
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .navmenu, .searchmenu {
+        height: 70vh;
+        width: 65vw;
+    }
+}
